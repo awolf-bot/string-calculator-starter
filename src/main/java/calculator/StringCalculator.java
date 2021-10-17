@@ -30,6 +30,8 @@ class StringCalculator {
 				for(String s:test) {
 					if(s.equals(""))
 						continue;
+					else if(Integer.parseInt(s)>1000)
+						continue;
 					sum1= sum1 + Integer.parseInt(s);
 				}
 				return sum1;
@@ -51,6 +53,8 @@ class StringCalculator {
 			}
 			for(String s:test) {
 				if(s.equals(""))
+					continue;
+				else if(Integer.parseInt(s)>1000)
 					continue;
 				sum1= sum1 + Integer.parseInt(s);
 			}
