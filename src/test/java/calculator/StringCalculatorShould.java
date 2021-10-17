@@ -30,4 +30,14 @@ class StringCalculatorShould {
         assertEquals(3, stringCalculator.add("//;\n1;2"));
     }
     
+    @Test
+	public void shouldHaveNegativeNumbersInException() {
+		try{
+			stringCalculator.add("-1,-2,3");
+			fail("Exception expected");
+		}catch(RuntimeException e) {
+			assertEquals("negatives not allowed: -1, -2",e.getMessage());
+		}
+	}
+	
 }
