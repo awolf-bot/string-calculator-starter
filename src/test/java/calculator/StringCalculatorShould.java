@@ -23,4 +23,11 @@ class StringCalculatorShould {
         
         assertEquals(6, stringCalculator.add("1\n2,3"));
     }
+    
+    @Test
+    void string_with_new_delimiters_instedOf_commas() {
+        
+        assertEquals(3, stringCalculator.add("//;\n1;2"));
+    }
+    
 }
